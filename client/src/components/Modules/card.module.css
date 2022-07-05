@@ -1,0 +1,27 @@
+.card{
+    height: max;
+    max-height: 20rem;
+    width: 11rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    margin: 2rem;
+    padding: 1em 2em;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px 0 rgb(187, 7, 163);
+    color: white;
+    max-width: 100vw;
+}
+
+.detailbutton{
+    box-shadow: 0 1px 3px 0 rgb(187, 7, 163);
+    background-color: black;
+    color: white
+}
+
+.span{
+    display:flex;
+    flex-wrap: wrap;
+    
+    height: 100vh;
+}
