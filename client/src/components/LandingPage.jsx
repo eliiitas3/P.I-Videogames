@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import styles from './Modules/card.module.css'
 
 export default function LandingPage(){
     return(
-        <div>
-            <h1>Videogames</h1>
+        <div style={{width:"100vw",height:"100vh", display:'flex',justifyContent: "center",alignItems: "center",flexDirection: "column"}}>
+            <h1 data-text='Press play' className={styles.h1}>Press play</h1>
             <Link to ='/Home'>
-                <button>Ingresar</button>
+                <button className={styles.detailbutton}>Play</button>
             </Link>
         </div>
     )

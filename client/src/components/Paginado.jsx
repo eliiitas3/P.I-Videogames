@@ -1,4 +1,5 @@
 import React from "react";
+import style from "./Modules/card.module.css"
 
 export default function Paginated({
     videogamesPerPage,
@@ -15,15 +16,15 @@ export default function Paginated({
     <ul>
         {currentPage > 1 ? (
         <li onClick={() => paginated(currentPage - 1)}>
-            <button>Prev</button>
+            <button className={style.buttonPag}>Prev</button>
         </li>
         ) : null}
         <li onClick={() => paginated(currentPage)}>
-        <button>{currentPage}</button>
+        <button className={style.buttonPag}>{currentPage}</button>
         </li>
         {currentPage < allGames / videogamesPerPage ? (
         <li onClick={() => paginated(currentPage + 1)}>
-            <button >Next</button>
+            <button className={style.buttonPag}>Next</button>
         </li>
     ) : null}
     </ul>

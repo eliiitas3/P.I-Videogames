@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "../components/Modules/card.module.css"
 
-export default function Card({name,id,image,genres,rating,description}){
+export default function Card({name,id,image,genres,rating,}){
     return(
             <div className={styles.card}>
                 <h3>{name}</h3>

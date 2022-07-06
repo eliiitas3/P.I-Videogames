@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { getGenres, postGame } from "../actions"
 import { Validate } from "./Validation"
+import styles from './Modules/card.module.css'
 
 export default function CreateForm(){
     const [error,setError]= useState({});
@@ -96,7 +97,7 @@ function handleRemovePlatform(e){
 
 return(
     <div>
-        <Link to='/Home'><button>Back</button></Link>
+        <Link to='/Home'><button className={styles.detailbutton}>Back</button></Link>
         <h1>Create videogame</h1>
         <form>
             <div>
@@ -175,7 +176,7 @@ return(
                 }
             </div>
         </form>
-        <button onClick={e=>handleSumbit(e)}>Create</button>
+        <button onClick={e=>handleSumbit(e)} className={styles.detailbutton}>Create</button>
     </div>
 )
 }

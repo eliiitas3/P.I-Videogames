@@ -7,7 +7,7 @@ export default function Navbar({handle}){
         <div>
             <SearchBar handle={handle}/>
             <Link to='/create'>
-                <button>Create Videogame</button>
+                <button style={{backgroundColor:"#00247D",color:"white"}}>Create Videogame</button>
             </Link>
         </div>
     )

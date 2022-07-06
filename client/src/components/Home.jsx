@@ -63,26 +63,26 @@ export default function Home(){
 
     return(
         <div>
-            <h1>VideoGames</h1>
+            <h1 style={{display:'flex',allignItems:"center",justifyContent:'center'}} data-text='VideoGames' className={styles.h1}>VideoGames</h1>
             <Navbar handle={(name)=>handlerSearch(name)}/>
-            <button onClick={(e)=>{handlerRefresh(true)}}>Refresh</button>
-            <select onChange={(e)=> handlesortalpha(e)}>
+            <button className={styles.select} onClick={(e)=>{handlerRefresh(true)}}>Refresh</button>
+            <select className={styles.select}  onChange={(e)=> handlesortalpha(e)}>
                 <option hidden>Order by alf</option>
                 <option value='Az'>Az</option>
                 <option value='Za'>Za</option>
             </select>
-            <select onChange={(e)=> handelSortRating(e)}>
+            <select className={styles.select} onChange={(e)=> handelSortRating(e)}>
                 <option hidden>Order by rating</option>
                 <option value="MaxRating">Min rating</option>
                 <option value="MinRating">Max rating</option>
             </select>
-            <select onChange={(e)=>handleFilterCreated(e)}>
+            <select className={styles.select} onChange={(e)=>handleFilterCreated(e)}>
                 <option hidden>Filter by created</option>
                 <option value='all'>all videogames</option>
                 <option value='created'>Not created</option>
                 <option value='notcreated'>Created</option>
             </select>
-            <select onChange={(e)=> handleFilterGenres(e)}>
+            <select className={styles.select} onChange={(e)=> handleFilterGenres(e)}>
                 <option value='dataBase' >All genres</option>
                 <option value='Action'>Action</option>
                 <option value='Indie' >Indie</option>
@@ -115,7 +115,6 @@ export default function Home(){
             
                 <span className={styles.span}>
                     {currentGames?.map((e)=>{
-                        console.log(e)
                         return(
                             <Card name={e.name} key={e.id} id={e.id} image={e.image} genres={e.genres>1?e.genres.join(' '):e.genres} rating={e.rating}/> 
                         )

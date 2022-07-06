@@ -11,7 +11,7 @@ export default function SearchBar({handle}){
     }
     return(
         <div>
-            <input type="search" placeholder="Search videogame" onChange={(e)=>handleSearch(e.target.value)}/>
+            <input style={{backgroundColor:'transparent'}} type="search" placeholder="Search videogame" onChange={(e)=>handleSearch(e.target.value)}/>
         </div>
     )
     // function handleImput(e){
